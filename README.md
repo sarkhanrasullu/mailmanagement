@@ -6,9 +6,9 @@ There are 2 Sample Classes:
 <br>**mailmanagement.samples.RecieveEmails.java** to recieve emails
 <br>**mailmanagement.samples.SendEmailSample.java** to send emails
 
-if you have not email server you can use cloud servers such as zoho.
+if you have not email server you can use free cloud servers such as zoho.
 
 If you have some questions feel free to contact me by email or facebook<br>
 
-**email:**serxanresullu@gmail.com<br>
-**facebook:**https://www.facebook.com/jsarkhanrasullu
+**email:** serxanresullu@gmail.com<br>
+**facebook:** https://www.facebook.com/jsarkhanrasullu
