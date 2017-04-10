@@ -5,12 +5,16 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
+import java.util.logging.Logger;
+import org.apache.commons.lang3.StringUtils;
 
 /**
  *
  * @author Sarkhan Rasullu
  */
 public class PropertyUtil {
+
+    private static final Logger LOG = Logger.getLogger(PropertyUtil.class.getName());
 
     public static String getProperty(String key, String filename) {
         Properties prop = new Properties();
@@ -41,51 +45,20 @@ public class PropertyUtil {
         if (result != null) {
             result = result.trim();
         }
-        System.out.println("key:" + key + ",value:" + result);
+        LOG.info("key:" + key + ",value:" + result);
         return result;
     }
 
-    public static long getPropertyAsLong(String property, String config, long default_) {
-        long val = default_;
+    public static Integer getPropertyAsInt(String property, String config) {
         try {
             String paramValue = getProperty(property, config);
-            val = Integer.parseInt(paramValue);
+            if (StringUtils.isNoneBlank(paramValue)) {
+                return Integer.parseInt(paramValue);
+            }
         } catch (Exception ex) {
-            val = default_;
         }
 
-        return val;
+        return null;
     }
 
-    public static int getPropertyAsInt(String property, String config, int default_) {
-        int val = default_;
-        try {
-            String paramValue = getProperty(property, config);
-            val = Integer.parseInt(paramValue);
-        } catch (Exception ex) {
-            val = default_;
-        }
-
-        return val;
-    }
-
-    public static boolean getPropertyAsBoolean(String property, String config) {
-        boolean val = false;
-        try {
-            String paramValue = getProperty(property, config);
-            val = Boolean.parseBoolean(paramValue);
-        } catch (Exception ex) {
-
-        }
-
-        return val;
-    }
-
-    public static String getPropertyAsString(String property, String config, String def) {
-        String paramValue = getProperty(property, config);
-        if (paramValue == null) {
-            return def;
-        }
-        return paramValue;
-    }
 }
