@@ -10,7 +10,7 @@ import org.apache.commons.lang3.StringUtils;
 
 /**
  *
- * @author Sarkhan Rasullu
+ * @author Sarkhan Rasullu :)
  */
 public class PropertyUtil {
 
