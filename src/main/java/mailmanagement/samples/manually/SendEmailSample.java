@@ -12,7 +12,7 @@ import management.configuration.MailConfigurationCenter;
 public class SendEmailSample {
 
     public static void main(String[] args) throws Exception {
-        sampleWithConfigurationFile();
+        sampleWithoutConfigurationFile();
 //        sampleWithoutConfigurationFile();
     }
 

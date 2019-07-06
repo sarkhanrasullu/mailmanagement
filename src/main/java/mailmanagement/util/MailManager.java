@@ -89,14 +89,14 @@ public class MailManager {
 
         try {
             Properties props = new Properties();
-            props.setProperty("mail.smtps.host", conf.getHost());
+            props.setProperty("mail.smtp.host", conf.getHost());
             if (conf.getUser().contains("@gmail")) {
                 props.put("mail.smtp.starttls.enable", "true");
             } else {
                 props.put("mail.smtp.socketFactory.port", conf.getPort());
                 props.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
             }
-            props.put("mail.smtps.auth", "true");
+            props.put("mail.smtp.auth", "true");
             props.put("mail.smtp.port", conf.getPort());
 
             Session session = Session.getInstance(props,
