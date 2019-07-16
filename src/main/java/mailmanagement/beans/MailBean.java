@@ -9,6 +9,7 @@ package mailmanagement.beans;
  *
  * @author Afgan Rasulov
  */
+//salam ee
 public final class MailBean {
 
     private String subject;
