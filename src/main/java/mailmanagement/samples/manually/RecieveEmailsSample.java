@@ -9,6 +9,8 @@ import management.configuration.MailConfigurationCenter;
 /**
  *
  * @author Sarkhan Rasullu
+ *
+ *Salam Mellim
  */
 public class RecieveEmailsSample {
 
